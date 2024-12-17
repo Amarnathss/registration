@@ -8,7 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files (CSS, HTML)
-app.use(express.static(path.join(__dirname)));
+//app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Handle form submission
 app.post("/submit", (req, res) => {
